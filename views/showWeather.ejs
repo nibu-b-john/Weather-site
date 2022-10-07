@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Today's Weather</title>
+    <link rel="stylesheet" href="css/weather.css" />
+  </head>
+  <body>
+    <div class="main-form">
+      <div class="firstHalf">
+        <div class="center-div">
+          <div class="temperature-column">
+            <div class="column">
+              <p><%= coord.lon %></p>
+              <p>Longitude</p>
+            </div>
+            <div class="column">
+              <p><%= coord.lat %></p>
+              <p>Longitude</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="sub-form">
+            <h1><%=name%></h1>
+            <div class="weatherImg">
+              <img src="<%=imgUrl%>" width="150px" height="150px" alt="" />
+            </div>
+            <div class="description">
+              <p><%= weatherData[0].description %></p>
+            </div>
+
+            <!-- <p><%=weatherData%></p>
+                <p><%=wind%></p>
+                <p><%=main%></p>
+                <p><%=name%></p> -->
+          </div>
+          <!--  -->
+          <div class="temperature-column">
+            <div class="column">
+              <p><%= wind.speed %></p>
+              <p>Wind Speed</p>
+            </div>
+            <div class="column">
+              <p><%= wind.deg %>℃</p>
+              <p>Wind degree</p>
+            </div>
+          </div>
+        </div>
+        <!-- bottom -->
+        <div class="temperature-row">
+          <div class="column">
+            <p><%= main.temp_min %>℃</p>
+            <p>Minimum Temperature</p>
+          </div>
+          <div class="column">
+            <p><%= main.temp_max %>℃</p>
+            <p>Maximum Temperature</p>
+          </div>
+          <div class="column">
+            <p><%= main.temp %>℃</p>
+            <p>Temperature</p>
+          </div>
+          <div class="column">
+            <p><%= main.feels_like %>℃</p>
+            <p>What it feels like</p>
+          </div>
+          <div class="column">
+            <p><%= main.pressure %></p>
+            <p>Pressure</p>
+          </div>
+          <div class="column">
+            <p><%= main.humidity %></p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="temperature-column"></div>
+      </div>
+    </div>
+  </body>
+</html>
