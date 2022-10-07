@@ -16,7 +16,7 @@ cd into the project.
 ```bash
   node weather.js
 ```
-Open http://localhost:3000 to view it in the browser.
+Open http://localhost:8000 to view it in the browser.
 
 ## Tech Stack
 
